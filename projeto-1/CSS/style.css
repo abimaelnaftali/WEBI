@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title-1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+header{
+    background-color: lightgray;
+}
+
+#pages{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+#pages, a{
+    text-decoration: none;
+    color: black;
+}
