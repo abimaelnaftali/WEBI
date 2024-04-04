@@ -1,3 +1,3 @@
 # Projeto 1
 
-Site construido com HTML e CSS.
+Site construído com HTML e CSS.
