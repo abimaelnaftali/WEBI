@@ -34,6 +34,12 @@ iframe {
     justify-content: center;
 }
 
+.Links {
+    text-align: center;
+    display: flexbox;
+    justify-content: space-evenly;
+}
+
 button {
     background-color: #4CAF50;
     color: white;
