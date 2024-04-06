@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+        .navbar ul{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(228, 218, 218);
+        color: black;
+        padding-right: 15px;
+    }
+    
+    .navbar li{
+        list-style-type: none;
+        padding: 1.5rem;
+    }
+    
+    .navbar a{
+        text-decoration: none;
+    }
+    
+    .navbar-logo{
+        flex: 1;
+        user-select: none;
+    }
+    
+    .navbar-burger{
+        display: none;
+    }
+    
+    .navbar-links:hover{
+        background-color: rgb(147, 148, 150);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    @media(max-width: 700px) {
+        .navbar ul{
+            padding: 0;
+            flex-wrap: wrap;
+    
+        }
+    
+        .navbar-burger{
+            display: block;
+        }
+    
+        .navbar-links{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    </style>
+    <!-- navbar.html -->
+<nav class="navbar">
+    <ul>
+        <li class="navbar-logo"><h2>Marca</h2></li>
+        <li class="navbar-burger"><img src="../imgs/menu.png" alt=""></li>
+        <li class="navbar-links"><a href="#"></a>Início</li>
+        <li class="navbar-links"><a href="#"></a>Masculino</li>
+        <li class="navbar-links"><a href="#"></a>Feminino</li>
+        <li class="navbar-links"><a href="#"></a>Sobre</li>
+        <li class="navbar-links"><a href="#"></a>Contato</li>
+    </ul>
+</nav>
+
+
+    
+</body>
+</html>
+
