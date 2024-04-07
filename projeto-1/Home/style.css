@@ -11,6 +11,51 @@ iframe {
     border: none;
 }
 
+.top{
+    display: flex;
+}
+
+.carrossel{
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carrossel .fotos{
+    width: 400%;
+    animation-name: animacao;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.carrossel .fotos img{
+    width: 24.9%;
+    height: 500px;
+}
+
+@keyframes animacao{
+    0% {margin-left: 0;}
+    25% {margin-left: 0;}
+    30% {margin-left: -100%;}
+    55% {margin-left: -100%;}
+    60% {margin-left: -200%;}
+    85% {margin-left: -200%;}
+
+}
+
+#car-side{
+    background-color: rgb(37, 129, 122);
+    width: 30%;
+}
+
+#car-text{
+    font-size: 45px;
+    margin: auto;
+    margin-left: 30px;
+    margin-top: 70px;
+    color: rgb(233, 240, 240);
+}
+
 #div-1{
     width: 100%;
     height: 460px;
@@ -21,7 +66,9 @@ iframe {
     display: flex;
     width: 50%;
 }
-#div-1-1, img{
+
+#div-1-1 img{
+    display: flex;
     width: 50%;
 }
 
