@@ -15,7 +15,7 @@ form {
     margin: 10px;
 }
 
-.forms {
+.forms-container {
     display: flex;
     justify-content: space-between;
 }
