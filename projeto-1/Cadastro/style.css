@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,6 +18,7 @@ iframe {
     margin-left: 3rem;
     margin-top: 5rem;
 }
+
 .formButton {
     margin: 3rem;
     display: flex;
@@ -53,3 +54,42 @@ input:focus {
     outline: none;
     border: 1px solid #4CAF50;
 }
+
+/* Mobile device */
+@media (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .divInForm {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formButton {
+        align-items: center;
+    }
+
+    iframe {
+        width: 100%;
+        border: none;
+    }
+
+    .formDiv {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    }
+
+    .formButton {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+

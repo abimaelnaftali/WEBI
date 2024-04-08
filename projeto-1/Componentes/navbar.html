@@ -12,7 +12,7 @@
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
-    }
+        }
     
         .navbar ul{
         display: flex;
@@ -21,14 +21,14 @@
         background-color: rgb(93, 94, 95);
         color: black;
         padding-right: 15px;
-    }
+        }
     
     .navbar li{
         list-style-type: none;
         padding: 1.5rem;
     }
 
-    .navbar, li, a{
+    .navbar, li ,a{
         text-decoration: none;
         color: white;
     }
@@ -55,7 +55,6 @@
         .navbar ul{
             padding: 0;
             flex-wrap: wrap;
-    
         }
     
         .navbar-burger{
@@ -71,13 +70,27 @@
     <!-- navbar.html -->
 <nav class="navbar">
     <ul>
-        <li class="navbar-logo"><h1>Marca</h1></li>
-        <li class="navbar-burger"><img title="Entrar" src="../imgs/menu.png" alt=""></li>
-        <li class="navbar-links"><a href="../Home/index.html">Início</a></li>
-        <li class="navbar-links"><a href="#">Masculino</a></li>
-        <li class="navbar-links"><a href="#">Feminino</a></li>
-        <li class="navbar-links"><a href="#">Sobre</a></li>
-        <li class="navbar-links"><a href="../Login/login.html"><img src="../imgs/profile.png" alt=""></a></li>
+        <li class="navbar-logo">
+            <h1>Marca</h1>
+        </li>
+        <li class="navbar-burger">
+            <img title="Entrar" src="../imgs/menu.png" alt="">
+        </li>
+        <li class="navbar-links">
+            <a target="_parent" href="../Home/index.html">Início</a>
+        </li>
+        <li class="navbar-links">
+            <a target="_parent"  href="#">Masculino</a>
+        </li>
+        <li class="navbar-links">
+            <a target="_parent"  href="#">Feminino</a>
+        </li>
+        <li class="navbar-links">
+            <a target="_parent"  href="#">Sobre</a>
+        </li>
+        <li class="navbar-links">
+            <a target="_parent"  href="../Login/login.html"><img src="../imgs/profile.png" alt=""></a>
+        </li>
     </ul>
 </nav>
     
