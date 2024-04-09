@@ -5,7 +5,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-iframe {
+#nav {
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+#foot{
     width: 100%;
     height: 100px;
     border: none;
@@ -63,6 +69,13 @@ input:focus {
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
     }
+
+    #nav{
+        height: 388px;
+    }
+    #foot{
+        height: 100px;
+    }
     
     .divInForm {
         display: grid;
@@ -72,11 +85,6 @@ input:focus {
 
     .formButton {
         align-items: center;
-    }
-
-    iframe {
-        width: 100%;
-        border: none;
     }
 
     .formDiv {

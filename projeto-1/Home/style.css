@@ -50,6 +50,8 @@
 }
 
 #car-side{
+    border-left: solid 40px;
+    border-color: rgb(146, 218, 218);
     background-color: rgb(37, 129, 122);
     width: 30%;
 }
@@ -182,8 +184,7 @@
     }
 
     #context img{
-        width: 440px;
-        height: 240px;
+        display: none;
     }
 
     #text-context h1{
@@ -192,7 +193,7 @@
         text-align: center;
     }
 
-    #text-context p :last-of-type{ 
+    #text-context p{ 
         margin: 0;
         text-align: center;
         margin-top: 10px;
@@ -212,7 +213,7 @@
 
 
     #div-1{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     #div-1-1{
@@ -228,6 +229,12 @@
         margin-top: 10px;
         margin-bottom: 20px;
         width: 200px;
+    }
+
+    #car-side{
+        border-top: solid 40px;
+        border-left: 0;
+        border-color: rgb(146, 218, 218);
     }
 }
 
