@@ -5,9 +5,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-iframe {
+#nav {
     width: 100%;
-    height: 100px;
+    height: 13vh;
+    border: none;
+}
+
+#foot{
+    width: 100%;
+    height: 13vh;
     border: none;
 }
 
@@ -57,6 +63,12 @@ table {
 }
 
 @media (max-width: 768px) {
+    #nav{
+        height: 388px;
+    }
+    #foot{
+        height: 100px;
+    }
     .div1, .div2 {
         width: 100%;
     }
