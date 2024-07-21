@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrinho</title>
+        <title>Cadastrar Produtos</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
 
     <iframe id="nav" scrolling="no" src="../Componentes/navbar.html"></iframe>
     <div class="Container">
-        <div class="left-blocks">
-            <h3 class="SubTitle">Complete seu pedido</h3>
+        <div>
+            <h3 class="SubTitle">Cadastre seu Produto</h3>
                 <form class="CheckoutForm">
                     <div class="BlockHeader">
                         <div class="block-text">
-                            <p class="block-title">Endereço de Entrega</p>
+                            <p class="block-title">Informações do produto</p>
                             <p class="block-subtitle">
-                                Informe o endereço onde deseja receber seu pedido
+                                Cadastre as informações do produto
                             </p>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                           id="postal-code"
                           type="text"
                           class="postal-code"
-                          placeholder="CEP"
+                          placeholder="Nome do produto"
                           required
                         />
                        
@@ -36,7 +36,7 @@
                           id="street"
                           type="text"
                           class="street"
-                          placeholder="Rua"
+                          placeholder="Descrição do produto"
                           required
                         />
                         <div class="flex-hor">
@@ -44,7 +44,7 @@
                             id="number"
                             type="text"
                             class="number"
-                            placeholder="Número"
+                            placeholder="Quantidade em estoque"
                             required
                           />
                           
@@ -52,53 +52,48 @@
                             id="complement"
                             type="text"
                             class="complement"
-                            placeholder="Complemento"
+                            placeholder="Preço do produto"
                           />
                         </div>
                         
                         <div class="flex-hor">
+                            <input class="CheckoutFormInput"
+                            id="city"
+                            type="text"
+                            class="city"
+                            placeholder="Quantidade de parcelas"
+                            required
+                          />
+
                           <input class="CheckoutFormInput"
                             id="neighbourhood"
                             type="text"
                             class="neighbourhood"
-                            placeholder="Bairro"
+                            placeholder="URL da imagem"
                             required
                           />
-                          <input class="CheckoutFormInput"
-                            id="city"
-                            type="text"
-                            class="city"
-                            placeholder="Cidade"
-                            required
-                          />
-                          <input class="CheckoutFormInput"
-                            id="cartState"
-                            type="text"
-                            class="cartState"
-                            placeholder="UF"
-                            required
-                          />
+                          
                         </div>
                       </div>
 
                       <div class="Installments" class="BlockLayout">
                         <div class="BlockHeader">
                           <div class="block-text">
-                            <p class="block-title" style="margin-top: 3rem;">Pagamento</p>
+                            <p class="block-title" style="margin-top: 3rem;">Tamanho do produto</p>
                             <p class="block-subtitle">
-                              O pagamento é feito na entrega. Escolha a forma que deseja pagar
+                              Selecione o tamanho que deseja incluir
                             </p>
                           </div>
                         </div>
                         <div class="installments-options">
                           <button  class="PlaceOrderButton">
-                            Cartão de crédito
+                            P
                           </button>
                           <button  class="PlaceOrderButton">
-                            Cartão de débito
+                            M
                           </button >
                           <button  class="PlaceOrderButton">
-                            Dinheiro
+                            G
                           </button>
                         </div>
                     </div>
@@ -108,7 +103,7 @@
             </div>
 
                 <div class="right-blocks">
-                    <h3 class="SubTitle">Roupas selecionadas</h3>
+                    <h3 class="SubTitle">Produtos selecionados para o estoque </h3>
                     <div class="OrderSummary" >
                       <ul class="product-list" >
                               <li class="SelectedProduct"  >
@@ -132,27 +127,30 @@
                         <ul class="billing">
                           <li>
                             <p class="billing-items-title billing-title">
-                              Total de itens
+                             Nome do produto
                             </p>
                             <span class="billing-items-value billing-value">
-                              R$ 
+                              Qtd
                             </span>
                           </li>
                           <li>
-                            <p class="billing-delivery-title billing-title">Entrega</p>
+                            <p class="billing-delivery-title billing-title">Tamanhos</p>
                             <span class="billing-delivery-value billing-value">
-                              R$ 
+                              Qtd
                             </span>
                           </li>
                           <li>
                             <p class="billing-total-title">Total</p>
                             <span class="billing-total-value">
-                              R$ 
+                              Qtd
                             </span>
                           </li>
                         </ul>
-                          <button class="PlaceOrderButton" >
-                            Confirmar pedido
+                        <button class="PlaceOrderButton" style="margin-bottom: 1rem;" >
+                          Confirmar Cadastro
+                        </button>
+                          <button class="PlaceCancelOrderButton" >
+                            Cancelar Cadastro
                           </button>
                     </div>
                   </div>
