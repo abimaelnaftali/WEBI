@@ -21,7 +21,6 @@
     width: 100%;
     height: 7.85vh;
     border: none;
-    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -39,30 +38,19 @@
     height: 480px;
 }
 
-#car-side{
-    border-top: solid 20px;
-    border-color: rgb(146, 218, 218);
-    background-color: rgb(37, 129, 122);
-    width: 100%;
-}
-
-#car-text{
-    padding: 20px;
-    font-size: 45px;
-    margin: auto;
-    color: rgb(233, 240, 240);
-}
-
 #text-context{
     margin: auto;
 }
 
 #text-context h1{
+    font-size: 33px;
+    font-weight: bold;
     margin-bottom: 30px;
     margin-left: 30px;
 }
 
 #text-context p{
+    font-weight: bold;
     text-align: justify;
     font-size: 20px;
     margin-left: 30px;
@@ -70,6 +58,7 @@
 }
 
 #context img{
+    border-radius: 15px;
     width: 640px;
     height: 360px;
 }
@@ -80,6 +69,7 @@
 }
 
 #div-1{
+    background-color: rgb(255, 240, 255);
     display: flex;
     width: 100%;
     height: 460px;
@@ -88,13 +78,14 @@
 
 #div-2{
     width: 100%;
-    height: 460px;
+    height: 435px;
     display: flex;
+    flex-direction: row-reverse;
 }
 
 #div-2-1{
     width: 50%;
-    background-color: rgb(18, 46, 46);
+    background-color: rgb(47, 124, 124);
 }
 
 #div-2-2{
@@ -112,24 +103,65 @@
     margin: auto;
     margin-left: 40px;
     margin-top: 20px;
-    color: rgb(233, 240, 240);
+    color: white;
 }
 
 #more{
     font-size: 20px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(241, 118, 36);;
+    background-color: rgb(224, 131, 68);;
     color: white;
     margin-left: 50px;
     margin-top: 40px;
-    height: 90px;
-    width: 200px;
+    padding: 25px;
 }
 
 #more:hover{
     background-color: rgb(209, 32, 32);
     transition: 0.5s;
+}
+
+#div-3{
+    background-color: rgb(226, 225, 225);
+}
+
+.btn{
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#div-3 h1{
+    font-size: 40px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#div-3 h3{
+    font-size: 30px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#div-4{
+    display: none;
+    margin-left: 40px;
+}
+
+#div-4 label{
+    margin-top: 10px;
+}
+
+#div-4 input{
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 7px;
+    width: 350px;
+    outline: none;
+    font-size: 1.3em;
+    padding: 5px 10px 5px 10px;
 }
 
 @media(max-width: 700px) {
