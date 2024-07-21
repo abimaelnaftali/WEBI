@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+
+    <iframe id="nav" scrolling="no" src="../Componentes/navbar.html"></iframe>
+    <div class="Container">
+        <div class="left-blocks">
+            <h3 class="SubTitle">Complete seu pedido</h3>
+                <form class="CheckoutForm">
+                    <div class="BlockHeader">
+                        <div class="block-text">
+                            <p class="block-title">Endereço de Entrega</p>
+                            <p class="block-subtitle">
+                                Informe o endereço onde deseja receber seu pedido
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-inputs">
+
+                        <input class="CheckoutFormInput"
+                          id="postal-code"
+                          type="text"
+                          class="postal-code"
+                          placeholder="CEP"
+                          required
+                        />
+                       
+                        <input class="CheckoutFormInput"
+                          id="street"
+                          type="text"
+                          class="street"
+                          placeholder="Rua"
+                          required
+                        />
+                        <div class="flex-hor">
+                          <input class="CheckoutFormInput"
+                            id="number"
+                            type="text"
+                            class="number"
+                            placeholder="Número"
+                            required
+                          />
+                          
+                          <input class="CheckoutFormInput"
+                            id="complement"
+                            type="text"
+                            class="complement"
+                            placeholder="Complemento"
+                          />
+                        </div>
+                        
+                        <div class="flex-hor">
+                          <input class="CheckoutFormInput"
+                            id="neighbourhood"
+                            type="text"
+                            class="neighbourhood"
+                            placeholder="Bairro"
+                            required
+                          />
+                          <input class="CheckoutFormInput"
+                            id="city"
+                            type="text"
+                            class="city"
+                            placeholder="Cidade"
+                            required
+                          />
+                          <input class="CheckoutFormInput"
+                            id="cartState"
+                            type="text"
+                            class="cartState"
+                            placeholder="UF"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="Installments" class="BlockLayout">
+                        <div class="BlockHeader">
+                          <div class="block-text">
+                            <p class="block-title">Pagamento</p>
+                            <p class="block-subtitle">
+                              O pagamento é feito na entrega. Escolha a forma que deseja pagar
+                            </p>
+                          </div>
+                        </div>
+                        <div class="installments-options">
+                          <button  class="PlaceOrderButton">
+                            Cartão de crédito
+                          </button>
+                          <button  class="PlaceOrderButton">
+                            Cartão de débito
+                          </button >
+                          <button  class="PlaceOrderButton">
+                            Dinheiro
+                          </button>
+                        </div>
+                    </div>
+                </form>
+
+                
+            </div>
+
+                <div class="right-blocks">
+                    <h3 class="SubTitle">Cafés selecionados</h3>
+                    <div class="OrderSummary" >
+                      <ul class="product-list" >
+                              <li class="SelectedProduct"  >
+                                <img
+                                  alt="product name"
+                                  class="product-image"
+                                />
+                                <div class="product-name-and-controls">
+                                  <p class="product-name">product</p>
+                                  <div class="controls">
+                                    <button class="RemoveButton" >
+                                      <span class="btn-text">Remover</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <strong class="price">
+                                </strong>
+                            </li>
+                      </ul>
+                      <div class="BillingSummary" >
+                        <ul class="billing">
+                          <li>
+                            <p class="billing-items-title billing-title">
+                              Total de itens
+                            </p>
+                            <span class="billing-items-value billing-value">
+                              R$ 
+                            </span>
+                          </li>
+                          <li>
+                            <p class="billing-delivery-title billing-title">Entrega</p>
+                            <span class="billing-delivery-value billing-value">
+                              R$ 
+                            </span>
+                          </li>
+                          <li>
+                            <p class="billing-total-title">Total</p>
+                            <span class="billing-total-value">
+                              R$ 
+                            </span>
+                          </li>
+                        </ul>
+                          <button class="PlaceOrderButton" >
+                            Confirmar pedido
+                          </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+</body>
+</html>
