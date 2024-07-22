@@ -60,9 +60,6 @@ button {
 
 .product-card {
     background-color: #e6e6e6;
-    margin: 10px;
-    padding: 5px;
-    flex: 4;
     text-align: center;
     border-radius: 10px;
     border: gray solid 1px;
@@ -80,12 +77,5 @@ button {
     }
     #foot{
         height: 100px;
-    }
-    .flex-row {
-        flex-direction: column;
-    }
-    .forms-container {
-        display: flex;
-        flex-direction: column;
     }
 }
