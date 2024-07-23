@@ -10,18 +10,18 @@
     <iframe id="nav" scrolling="no" src="../Componentes/navbar.html"></iframe>
     <div class="Container">
         <div class="ImageContainer">
-            <img src="" alt="Imagem do produto">
+            <img id="product-image" src="" alt="Imagem do produto">
         </div>
 
         <div class="InfoProduct">
-            <h1 class="ProductTitle">Nome do Produto</h1>
+            <h1 id="product-title" class="ProductTitle">Nome do Produto</h1>
 
-            <p class="ProductDescription">Descrição do produto</p>
+            <p id="product-description" class="ProductDescription">Descrição do produto</p>
 
             <div class="ContainerPrice">
-                <span class="Price">Preço do produto</span>
+                <span id="product-price" class="Price">Preço do produto</span>
 
-                <span style="font-size:0.875rem; line-height: 1.25rem; color: #a1a1aa;">Em ate 12x sem juros</span>
+                <span id="product-parcels" style="font-size:0.875rem; line-height: 1.25rem; color: #a1a1aa;">Em ate 12x sem juros</span>
             </div>
 
             <div style="margin-top: 2rem;">
@@ -37,5 +37,6 @@
             <button class="AddToCartButton" type="button">Adicionar ao carrinho</button>
         </div>
     </div>
+    <script src="produto.js"></script>
 </body>
 </html>
