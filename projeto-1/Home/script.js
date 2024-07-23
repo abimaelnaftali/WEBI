@@ -1,5 +1,5 @@
 class News {
-    constructor ({id, name, email, tel, wp}) {
+    constructor({ id, name, email, tel, wp }) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -24,22 +24,6 @@ editButton.onclick = function () {
     var buttonEdit = document.getElementById("editNews");
     buttonEdit.style.display = "none";
     button.style.display = "none";
-};
-
-var submitConsult = document.getElementById("submit-consult");
-submitConsult.onclick = function () {
-    var newForm = document.getElementById("div-4");
-    newForm.style.display = "block";
-
-    var buttonSubmit = document.getElementById("submit");
-    var createAccount = document.getElementById("createAccount");
-    var editButton = document.getElementById("editButton");
-    var deleteButton = document.getElementById("deleteBottun");
-    buttonSubmit.style.display = "none";
-    createAccount.style.display = "none";
-    submitConsult.style.display = "none";
-    editButton.style.display = "block";
-    deleteButton.style.display = "inline-block";
 };
 
 const formNews = document.getElementById('formNews');
@@ -80,17 +64,57 @@ function addNews(newsData) {
     return fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/news.json', {
         method: 'POST',
         headers: {
-            'Content-type' : 'application/json'
+            'Content-type': 'application/json'
         },
         body: JSON.stringify(newsData),
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Resposta de rede não foi ok');
-        } else {
-            alert("Tudo certo " + newsData.name + "! Em breve você receberá uma mensagem no endereço de email " + newsData.email + "!");
-        }
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Resposta de rede não foi ok');
+            } else {
+                alert("Tudo certo " + newsData.name + "! Em breve você receberá uma mensagem no endereço de email " + newsData.email + "!");
+            }
+        });
 }
 
+function buscarEmail() {
+    const emailBusca = document.getElementById('email-consult').value;
 
+    fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/news/' + emailBusca + '.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const noticia = data.noticia;
+                preencherFormulario(noticia);
+                exibirFormulario();
+            } else {
+                alert('Cadastro não encontrado.');
+            }
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+}
+
+function preencherFormulario(noticia) {
+    document.getElementById('name').value = noticia.nome;
+    document.getElementById('email').value = noticia.email;
+    document.getElementById('tel').value = noticia.tel;
+    document.getElementById('wp').value = noticia.wp;
+}
+
+function exibirFormulario() {
+    submitConsult = document.getElementById("submit-consult")
+    submitConsult.onclick = function () {
+        var newForm = document.getElementById("div-4");
+        newForm.style.display = "block";
+        var buttonSubmit = document.getElementById("submit");
+        var createAccount = document.getElementById("createAccount");
+        var editButton = document.getElementById("editButton");
+        var deleteButton = document.getElementById("deleteBottun");
+        buttonSubmit.style.display = "none";
+        createAccount.style.display = "none";
+        submitConsult.style.display = "none";
+        editButton.style.display = "block";
+        deleteButton.style.display = "inline-block";
+    }
+
+}
