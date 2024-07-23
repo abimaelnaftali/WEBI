@@ -23,7 +23,7 @@ const passwordField = document.getElementById('password');
 const passwordError = document.getElementById('password-error');
 
 cancelButton.addEventListener('click', () => {
-    window.location.href = '../Home/index.html';
+    window.location.href = '../Login/login.html';
 });
 
 confirmPasswordField.addEventListener('input', validatePasswords);
