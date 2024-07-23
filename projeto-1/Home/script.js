@@ -18,13 +18,13 @@ newText.onclick = function () {
 };
 var editForm = document.getElementById("div-5");
 var editButton = document.getElementById("editNews");
-editButton.onclick = function () {
+/*editButton.onclick = function () {
     editForm.style.display = "block";
     var button = document.getElementById("newText");
     var buttonEdit = document.getElementById("editNews");
     buttonEdit.style.display = "none";
     button.style.display = "none";
-};
+};*/
 
 const formNews = document.getElementById('formNews');
 
