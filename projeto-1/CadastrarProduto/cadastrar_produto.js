@@ -1,44 +1,17 @@
-class Product {
-    constructor({ id, name, description, quantity, price, photo, size }) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.quantity = quantity;
-        this.price = price;
-        this.photo = photo;
-        this.size = size;
-    }
-}
-
 const addProductForm = document.getElementById('add-product-form');
 const registerProductBtn = document.getElementById('confirm-register');
 const editProductBtn = document.getElementById('confirm-edition');
-const productList = document.getElementById('product-list'); // <<< AQUI
 
 const nameField = document.getElementById('name');
 const descriptionField = document.getElementById('description');
 const quantityField = document.getElementById('quantity');
 const priceField = document.getElementById('price');
 const photoField = document.getElementById('photo');
+const parcelsField = document.getElementById('parcels');
 //const sizeField = document.getElementById('size');
-
-document.addEventListener('DOMContentLoaded', function () {
-    listProducts();
-});
 
 // Event listener para o envio do formulário
 registerProductBtn.addEventListener('click', submitProduct);
-
-function listProducts() {
-    // Busca produtos no Firebase
-    fetchProducts()
-        .then(products => {
-            renderProducts(products);
-        })
-        .catch(error => {
-            console.error('Houve um problema ao buscar os produtos:', error);
-        });
-}
 
 function getFormData(){
     const productData = {
@@ -46,9 +19,11 @@ function getFormData(){
         description: descriptionField.value,
         quantity: quantityField.value,
         price: priceField.value,
+        parcels: parcelsField.value,
         photo: photoField.value || 'https://via.placeholder.com/100', // Foto padrão
         //size: sizeField.value
     };
+    console.log(`Quantidade de parcelas: ${parcelsField.value}`);
     console.log(productData);
 
     return productData;
@@ -90,34 +65,6 @@ function addProduct(productData) {
         });
 }
 
-// Função para buscar produtos no Firebase
-function fetchProducts() {
-    return fetch('https://web01-miniprojeto04-default-rtdb.firebaseio.com/products.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Resposta de rede não foi ok');
-            }
-            return response.json();
-        })
-        .then(products => {
-            const productsList = [];
-            for (let key in products) {
-                const product = new Product({
-                    id: key,
-                    name: products[key].name,
-                    description: products[key].description,
-                    quantity: products[key].quantity,
-                    price: products[key].price,
-                    photo: products[key].photo,
-                    //size: products[key].size
-                });
-
-                productsList.push(product);
-            }
-            return productsList;
-        });
-}
-
 function removeProduct(productId) {
     return fetch(`https://web01-miniprojeto04-default-rtdb.firebaseio.com/products/${productId}.json`, {
         method: 'DELETE'
@@ -148,6 +95,7 @@ function changeForm(productId) {
             quantityField.value = product.quantity;
             priceField.value = product.price;
             photoField.value = product.photo;
+            parcelsField.value = product.parcels;
             //sizeField.value = product.size;
 
             registerProductBtn.style.display = 'none';
@@ -189,17 +137,6 @@ function updateProduct(productId, productData) {
         });
 }
 
-// Função para renderizar produtos na página
-function renderProducts(products) {
-    // Limpa os produtos existentes
-    // Tem que pegar esse elemento aqui antes pelo id, que é o elemento pai. Veja lá no começo do código
-    productList.innerHTML = '';
-
-    products.forEach(product => {
-        const productCard = createProductCard(product);
-        productList.appendChild(productCard); // adiciona o produto no elemento pai
-    });
-}
 
 // Função para criar o "card" de produto, ou seja, como o produto vai ser exibido na listagem
 function createProductCard(product) {
@@ -212,7 +149,6 @@ function createProductCard(product) {
     productCard.style.alignItems = 'top';
 
     // Criação do elemento aki, tipo adicionar a imagem, o texto, etc.
-
     const productImage = document.createElement('img');
     productImage.style.maxWidth = '4rem';
     productImage.style.maxHeight = '4rem';
@@ -265,6 +201,7 @@ function createProductCard(product) {
 
     btn_remove.addEventListener('mouseover', function() {
         btn_remove.style.backgroundColor = '#dc2626';
+        btn_remove.style.cursor = 'pointer';
     });
 
     btn_remove.addEventListener('mouseout', function() {
@@ -296,6 +233,7 @@ function createProductCard(product) {
 
     btn_update.addEventListener('mouseover', function() {
         btn_update.style.backgroundColor = '#D7D5D5';
+        btn_update.style.cursor = 'pointer';
     });
 
     btn_update.addEventListener('mouseout', function() {

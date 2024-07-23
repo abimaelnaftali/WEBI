@@ -300,6 +300,7 @@
   font-weight: 700;
   transition: background-color 0.3s;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: #C18C1B;
@@ -327,6 +328,7 @@
   font-weight: 700;
   transition: background-color 0.3s;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: #dc2626;
