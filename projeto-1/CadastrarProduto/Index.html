@@ -12,7 +12,7 @@
     <div class="Container">
         <div>
             <h3 class="SubTitle">Cadastre seu Produto</h3>
-                <form class="CheckoutForm">
+                <form id="add-product-form" class="CheckoutForm">
                     <div class="BlockHeader">
                         <div class="block-text">
                             <p class="block-title">Informações do produto</p>
@@ -25,7 +25,7 @@
                     <div class="form-inputs">
 
                         <input class="CheckoutFormInput"
-                          id="postal-code"
+                          id="name"
                           type="text"
                           class="postal-code"
                           placeholder="Nome do produto"
@@ -33,7 +33,7 @@
                         />
                        
                         <input class="CheckoutFormInput"
-                          id="street"
+                          id="description"
                           type="text"
                           class="street"
                           placeholder="Descrição do produto"
@@ -41,7 +41,7 @@
                         />
                         <div class="flex-hor">
                           <input class="CheckoutFormInput"
-                            id="number"
+                            id="quantity"
                             type="text"
                             class="number"
                             placeholder="Quantidade em estoque"
@@ -49,7 +49,7 @@
                           />
                           
                           <input class="CheckoutFormInput"
-                            id="complement"
+                            id="price"
                             type="text"
                             class="complement"
                             placeholder="Preço do produto"
@@ -58,7 +58,7 @@
                         
                         <div class="flex-hor">
                             <input class="CheckoutFormInput"
-                            id="city"
+                            id="parcels"
                             type="text"
                             class="city"
                             placeholder="Quantidade de parcelas"
@@ -66,7 +66,7 @@
                           />
 
                           <input class="CheckoutFormInput"
-                            id="neighbourhood"
+                            id="photo"
                             type="text"
                             class="neighbourhood"
                             placeholder="URL da imagem"
@@ -105,7 +105,7 @@
                 <div class="right-blocks">
                     <h3 class="SubTitle">Produtos selecionados para o estoque </h3>
                     <div class="OrderSummary" >
-                      <ul class="product-list" >
+                      <ul id="product-list" class="product-list" >
                               <li class="SelectedProduct"  >
                                 <img
                                   alt="product name"
@@ -146,8 +146,11 @@
                             </span>
                           </li>
                         </ul>
-                        <button class="PlaceOrderButton" style="margin-bottom: 1rem;" >
+                        <button id="confirm-register" class="PlaceOrderButton" style="margin-bottom: 1rem;" >
                           Confirmar Cadastro
+                        </button>
+                        <button id="confirm-edition" class="PlaceOrderButton" style="margin-bottom: 1rem; display: none;" >
+                          Confirmar Edição
                         </button>
                           <button class="PlaceCancelOrderButton" >
                             Cancelar Cadastro
@@ -156,6 +159,6 @@
                   </div>
                 </div>
             </div>
-
+            <script src="cadastrar_produto.js"></script>
 </body>
 </html>
