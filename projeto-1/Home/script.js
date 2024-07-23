@@ -1,3 +1,13 @@
+class News {
+    constructor ({id, name, email, tel, wp}) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.tel = tel;
+        this.wp = wp;
+    }
+}
+
 var newForm = document.getElementById("div-4");
 newText.onclick = function () {
     newForm.style.display = "block";
@@ -31,16 +41,6 @@ submitConsult.onclick = function () {
     editButton.style.display = "block";
     deleteButton.style.display = "inline-block";
 };
-
-class News {
-    constructor ({id, name, email, tel, wp}) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.tel = tel;
-        this.wp = wp;
-    }
-}
 
 const formNews = document.getElementById('formNews');
 
