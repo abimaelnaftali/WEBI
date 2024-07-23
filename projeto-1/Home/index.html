@@ -108,18 +108,34 @@
                 <input type="email" required id="email" name="email"><br>
 
                 <label for="fone">Telefone</label><br>
-                <input type="tel" id="fone" name="fone"><br>
+                <input type="tel" id="tel" name="tel"><br>
 
                 <label for="wp">WhatsApp</label><br>
                 <input type="tel" required id="wp" name="wp"><br>
 
-                <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 0;">Receber</button>
-                <a href="../Cadastro/index.html"><button type="button" class="btn btn-success btn-lg">Criar conta completa</button></a>
+                <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 0;" id="submit">Receber</button>
+                <a href="../Cadastro/index.html"><button type="button" class="btn btn-success btn-lg" id="createAccount">Criar conta completa</button></a>
                 
             </form>
         </div>
         <button type="button" class="btn btn-primary btn-lg" id="newText">Cadastre-se</button>
+        <button type="button" class="btn btn-primary btn-lg" id="editNews">Já tenho cadastro</button>
+
+        <div id="div-5">
+            <form action="" id="formNewsEdit">
+
+                <label for="email-consult">Email</label><br>
+                <input type="email" required id="email-consult" name="email"><br>
+
+                <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 0;" id="submit-consult">Consultar</button>
+                <button type="submit" class="btn btn-warning btn-lg" style="margin-left: 0;" id="editButton">Editar</button>
+                <button type="submit" class="btn btn-danger btn-lg" style="margin-left: 0;" id="deleteBottun">Deletar</button>
+            </form>
+        </div>
+
     </div>
+
+    
 
     <!-- Componente footer -->
     <iframe id="foot" scrolling="no" src="../Componentes/footer.html"></iframe>

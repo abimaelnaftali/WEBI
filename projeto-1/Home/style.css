@@ -164,6 +164,33 @@
     padding: 5px 10px 5px 10px;
 }
 
+#div-5 input{
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 7px;
+    width: 350px;
+    outline: none;
+    font-size: 1.3em;
+    padding: 5px 10px 5px 10px;
+}
+
+#div-5{
+    display: none;
+    margin-left: 40px;
+}
+
+#editButton{
+    display: none;
+}
+
+#deleteBottun{
+    display: none;
+}
+
+#editButton{
+    margin-bottom: 0;
+    display: none;
+}
+
 @media(max-width: 700px) {
     #nav{
         height: 13vh;
