@@ -30,7 +30,7 @@ function listProducts() {
 
 // Função para buscar produtos no Firebase
 function fetchProducts() {
-    return fetch('https://web01-miniprojeto04-default-rtdb.firebaseio.com/products.json')
+    return fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/products.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Resposta de rede não foi ok');

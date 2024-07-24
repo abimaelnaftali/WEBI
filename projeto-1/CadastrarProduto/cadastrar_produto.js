@@ -29,6 +29,13 @@ function getFormData(){
     return productData;
 }
 
+function resetForm() {
+    editProductBtn.style.display = 'none';
+    registerProductBtn.removeAttribute('style');
+
+    addProductForm.reset();
+}
+
 function submitProduct(event) {
     event.preventDefault(); // Evita o envio padrão do formulário
 
@@ -47,7 +54,7 @@ function submitProduct(event) {
 
 // Função para adicionar produto no Firebase
 function addProduct(productData) {
-    return fetch('https://web01-miniprojeto04-default-rtdb.firebaseio.com/products.json', {
+    return fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/products.json', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -66,7 +73,7 @@ function addProduct(productData) {
 }
 
 function removeProduct(productId) {
-    return fetch(`https://web01-miniprojeto04-default-rtdb.firebaseio.com/products/${productId}.json`, {
+    return fetch(`https://projeto-ii-c500a-default-rtdb.firebaseio.com/products/${productId}.json`, {
         method: 'DELETE'
     })
         .then(response => {
@@ -82,7 +89,7 @@ function removeProduct(productId) {
 }
 
 function changeForm(productId) {
-    return fetch(`https://web01-miniprojeto04-default-rtdb.firebaseio.com/products/${productId}.json`)
+    return fetch(`https://projeto-ii-c500a-default-rtdb.firebaseio.com/products/${productId}.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Resposta de rede não foi ok');
@@ -120,7 +127,7 @@ function submitEdition(productId) {
 }
 
 function updateProduct(productId, productData) {
-    return fetch(`https://web01-miniprojeto04-default-rtdb.firebaseio.com/products/${productId}.json`, {
+    return fetch(`https://projeto-ii-c500a-default-rtdb.firebaseio.com/products/${productId}.json`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -249,6 +256,5 @@ function createProductCard(product) {
     return productCard;
 }
 
-// URL's
+// URL firebase:
 // https://projeto-ii-c500a-default-rtdb.firebaseio.com/
-// https://web01-miniprojeto04-default-rtdb.firebaseio.com/

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function searchProduct(){
-    return fetch(`https://web01-miniprojeto04-default-rtdb.firebaseio.com/products/${productKey}.json`)
+    return fetch(`https://projeto-ii-c500a-default-rtdb.firebaseio.com/products/${productKey}.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Resposta de rede não foi ok');
@@ -22,7 +22,7 @@ function searchProduct(){
         .then(product => {
             productImage.src = product.photo;
             productTitle.innerHTML = product.name;
-            productPrice.innerHTML = product.price;
+            productPrice.innerHTML = `R$ ${product.price}`;
             productDescription.innerHTML = product.description;
             productParcels.innerHTML = `Em ate ${product.parcels}x sem juros`
         })
