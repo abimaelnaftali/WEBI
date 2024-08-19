@@ -64,10 +64,10 @@ table {
 
 @media (max-width: 768px) {
     #nav{
-        height: 388px;
+        height: 55vh;
     }
     #foot{
-        height: 100px;
+        height: 7.85vh;
     }
     .div1, .div2 {
         width: 100%;

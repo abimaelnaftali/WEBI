@@ -399,3 +399,14 @@
     background-color: #4B2995;
   }
 }
+
+@media(max-width: 700px) {
+    
+  #nav {
+      height: 55vh;
+  }
+
+  #foot {
+      height: 7.85vh;
+  }
+}
